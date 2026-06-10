@@ -19,15 +19,25 @@ function CodeEditor() {
   );
 
   return (
-    <Editor
-      height="100%"
-      language={language}
-      theme={theme}
-      value={code}
-      onChange={(value) =>
-        setCode(value || "")
-      }
-    />
+    <div className="h-full w-full">
+      <Editor
+        height="100%"
+        language={language}
+        theme={theme}
+        value={code}
+        onChange={(value) =>
+          setCode(value || "")
+        }
+        options={{
+          minimap: {
+            enabled: false,
+          },
+          automaticLayout: true,
+          scrollBeyondLastLine: false,
+          fontSize: 14,
+        }}
+      />
+    </div>
   );
 }
 

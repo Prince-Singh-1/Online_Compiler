@@ -2,7 +2,6 @@ import Navbar from "../components/Navbar";
 import CodeEditor from "../components/CodeEditor";
 import InputPanel from "../components/InputPanel";
 import OutputPanel from "../components/OutputPanel";
-import StatusBar from "../components/StatusBar";
 
 function Home() {
   return (
@@ -10,31 +9,47 @@ function Home() {
 
       <Navbar />
 
-      <div className="flex-1 flex">
+      <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
+
+        {/* Editor */}
 
         <div
           className="
-          w-[70%]
-          border-r
-          border-slate-800"
+          w-full
+          md:w-[70%]
+          h-[50vh]
+          md:h-full
+          border-b
+          md:border-b-0
+          md:border-r
+          border-slate-800
+          "
         >
           <CodeEditor />
         </div>
 
+        {/* Input + Output */}
+
         <div
           className="
-          w-[30%]
+          w-full
+          md:w-[30%]
+          h-[50vh]
+          md:h-full
           flex
-          flex-col"
+          flex-col
+          "
         >
+
+          {/* Input */}
 
           <div
             className="
-            h-1/2
+            h-[35%]
             border-b
-            border-slate-800"
+            border-slate-800
+            "
           >
-
             <div
               className="
               h-10
@@ -42,7 +57,10 @@ function Home() {
               text-white
               px-4
               flex
-              items-center"
+              items-center
+              text-sm
+              font-semibold
+              "
             >
               INPUT
             </div>
@@ -50,11 +68,11 @@ function Home() {
             <div className="h-[calc(100%-40px)]">
               <InputPanel />
             </div>
-
           </div>
 
-          <div className="h-1/2">
+          {/* Output */}
 
+          <div className="h-[65%]">
             <div
               className="
               h-10
@@ -62,7 +80,10 @@ function Home() {
               text-white
               px-4
               flex
-              items-center"
+              items-center
+              text-sm
+              font-semibold
+              "
             >
               OUTPUT
             </div>
@@ -70,14 +91,11 @@ function Home() {
             <div className="h-[calc(100%-40px)]">
               <OutputPanel />
             </div>
-
           </div>
 
         </div>
 
       </div>
-
-      <StatusBar />
 
     </div>
   );

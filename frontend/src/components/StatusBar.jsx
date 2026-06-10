@@ -14,19 +14,22 @@ function StatusBar() {
   );
 
   return (
-    <div
-      className="
-      h-8
-      bg-slate-900
-      border-t
-      border-slate-800
-      text-gray-300
-      px-4
-      flex
-      items-center
-      gap-6
-      text-sm"
-    >
+   <div
+  className="
+  min-h-8
+  bg-slate-900
+  border-t
+  border-slate-800
+  text-gray-300
+  px-4
+  py-1
+  flex
+  flex-wrap
+  items-center
+  gap-3
+  text-xs
+  "
+>
       <span>
         Language: {language}
       </span>
