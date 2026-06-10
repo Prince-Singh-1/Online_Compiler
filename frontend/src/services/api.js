@@ -1,15 +1,13 @@
 import axios from "axios";
 
 const API =
-  "http://localhost:5000/api";
+  "https://online-compiler-backend-ae1t.onrender.com/api";
 
-export const executeCode =
-  async (payload) => {
-    const response =
-      await axios.post(
-        `${API}/run`,
-        payload
-      );
+export const executeCode = async (payload) => {
+  const response = await axios.post(
+    `${API}/run`,
+    payload
+  );
 
-    return response.data;
-  };
+  return response.data;
+};
