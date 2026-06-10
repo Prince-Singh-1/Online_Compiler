@@ -168,7 +168,7 @@ function Navbar() {
           font-bold
           "
         >
-          ⚡ VOLTARIS Compiler
+          ⚡ Voltaris Compiler
         </h1>
 
         <LanguageSelector />
